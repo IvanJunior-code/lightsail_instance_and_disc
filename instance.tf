@@ -1,7 +1,7 @@
 resource "aws_lightsail_instance" "lightsail_terraform" {
   name              = "lightsail_terraform"
-  availability_zone = "us-east-1a"
-  blueprint_id      = "ubuntu_22_04" #aws lightsail get-blueprints
-  bundle_id         = "micro_3_0"    #aws lightsail get-bundles
+  availability_zone = var.availability_zone
+  blueprint_id      = var.blueprint_id
+  bundle_id         = var.bundle_id
   key_pair_name     = var.key_pair_name
 }
