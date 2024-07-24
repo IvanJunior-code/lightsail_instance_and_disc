@@ -25,7 +25,7 @@ sudo mkdir -p ${POINT}
 # Adicionar ao fstab para montagem automática
 sudo echo "${DEVICE}p1 ${POINT} ext4 defaults 0 1" | sudo tee -a /etc/fstab
 
-# Montar tabela de montagem
+# Montar sistemas de arquivos
 sudo mount -a
 
 # Configurar permissão no ponto de montagem para o usuário ubuntu
