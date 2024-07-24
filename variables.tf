@@ -1,6 +1,9 @@
 variable "key_pair_name" {
 }
 
+variable "path_key_pair" {
+}
+
 variable "availability_zone" {
   default = "us-east-1a"
 }
