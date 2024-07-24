@@ -1,6 +1,6 @@
 resource "null_resource" "exec" {
-    provisioner "file" {
-    source = "script.sh"
+  provisioner "file" {
+    source      = "script.sh"
     destination = "/tmp/script.sh"
   }
 
@@ -18,9 +18,9 @@ resource "null_resource" "exec" {
   }
 
   connection {
-    type = "ssh"
-    user = "ubuntu"
+    type        = "ssh"
+    user        = "ubuntu"
     private_key = file(var.path_key_pair)
-    host = aws_lightsail_instance.lightsail_terraform.public_ip_address
+    host        = aws_lightsail_instance.lightsail_terraform.public_ip_address
   }
 }
