@@ -23,4 +23,6 @@ resource "null_resource" "exec" {
     private_key = file(var.path_key_pair)
     host        = aws_lightsail_instance.lightsail_terraform.public_ip_address
   }
+
+  depends_on = [aws_lightsail_disk_attachment.attachment]
 }
