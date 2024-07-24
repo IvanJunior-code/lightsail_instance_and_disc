@@ -1,1 +1,2 @@
 key_pair_name = "key_name"
+path_key_pair = "/path/to/key.pem"
